@@ -13,6 +13,6 @@ func main()  {
 	http.Handle("/contact/", controllers.New("html/contact.html", "contact.html"))
 	http.Handle("/static/",
 		http.FileServer(http.Dir("")))
-	fmt.Println("Running server on 0.0.0.0:8080")
-	http.ListenAndServe("0.0.0.0:8080", nil)
+	fmt.Println("Running server on 0.0.0.0:4337")
+	http.ListenAndServe("0.0.0.0:4337", nil)
 }
