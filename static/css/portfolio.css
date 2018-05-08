@@ -1,0 +1,8 @@
+.hero {
+    background: #E0E0E0;
+}
+
+.hero__title {
+    margin: 24px;
+    font-weight: 100;
+}
