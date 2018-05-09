@@ -5,10 +5,11 @@ import (
 	"fmt"
 
 	"net/http"
+	"github.com/ryan-berger/portfolio/handlers"
 )
 
 func main()  {
-	http.Handle("/", controllers.New("html/index.html", "index.html"))
+	http.HandleFunc("/", handlers.HeaderHandler("html/index.html", "index.html", "Ryan Berger"))
 	http.Handle("/portfolio/", controllers.New("html/portfolio.html", "portfolio.html"))
 	http.Handle("/contact/", controllers.New("html/contact.html", "contact.html"))
 	http.Handle("/static/",
