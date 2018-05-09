@@ -68,15 +68,6 @@
         padding-bottom: 128px;
     }
 
-    .header {
-        display: none;
-    }
-
-    .header--mobile {
-        display: flex;
-        justify-content: flex-end;
-    }
-
     .hero__image {
         height: 150px;
         padding: 28px 0;

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/ryan-berger/portfolio/controllers"
 	"fmt"
 
 	"net/http"
@@ -9,9 +8,9 @@ import (
 )
 
 func main()  {
-	http.HandleFunc("/", handlers.HeaderHandler("html/index.html", "index.html", "Ryan Berger"))
-	http.Handle("/portfolio/", controllers.New("html/portfolio.html", "portfolio.html"))
-	http.Handle("/contact/", controllers.New("html/contact.html", "contact.html"))
+	http.HandleFunc("/", handlers.HeaderHandler("html/index.html", "index.html", ""))
+	http.HandleFunc("/portfolio/", handlers.HeaderHandler("html/portfolio.html", "portfolio.html", "Portfolio"))
+	http.HandleFunc("/contact/", handlers.HeaderHandler("html/contact.html", "contact.html", "Contact"))
 	http.Handle("/static/",
 		http.FileServer(http.Dir("")))
 	fmt.Println("Running server on 0.0.0.0:4337")
