@@ -10,6 +10,39 @@
 
 </head>
 <body>
-    {{ template "header.html" . }}
+
+<div class="modal-container">
+    <div class="modal">
+
+    </div>
+</div>
+
+{{ template "header.html" . }}
+<div class="filter-header">
+
+</div>
+
+    <div class="derp">
+        <div class="project" id="vidangel">
+            <div class="project__header">VidAngel</div>
+            <div class="project__content">
+                <img src="/static/assets/vidangel.png" class="project__image">
+                <p class="project__description">
+                    Bacon ipsum dolor amet ball tip t-bone kielbasa pancetta burgdoggen,
+                    alcatra pork pastrami short loin.
+                </p>
+            </div>
+        </div>
+        <div class="project" id="vampir">
+            <div class="project__header">Vampir</div>
+            <div class="project__content">
+                <img src="/static/assets/vampir.png" class="project__image">
+                <p class="project__description">
+                    Bacon ipsum dolor amet ball tip t-bone kielbasa pancetta burgdoggen,
+                    alcatra pork pastrami short loin.</p>
+            </div>
+        </div>
+    </div>
+<script src="/static/js/portfolio.js"></script>
 </body>
 </html>

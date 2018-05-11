@@ -12,7 +12,7 @@ $(document).ready(function () {
             overlay.show();
             $("body").css({"overflow": "hidden", position: "fixed"});
         } else {
-            sidenav.animate({top: "-100%"}, 300);
+            sidenav.animate({top: "-200%"}, 300);
             overlay.hide();
             $("body").css({"overflow": "auto", position: "absolute"});
         }

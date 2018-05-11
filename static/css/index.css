@@ -1,3 +1,7 @@
+body {
+    max-height: 100vh;
+}
+
 .hero {
     background: #E0E0E0;
     display: flex;
@@ -65,12 +69,12 @@
 @media (max-width: 850px) {
     .hero {
         flex-direction: column-reverse;
-        padding-bottom: 128px;
+        padding-bottom: 56px;
     }
 
     .hero__image {
         height: 150px;
-        padding: 28px 0;
+        padding: 0;
     }
 
 

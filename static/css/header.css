@@ -1,7 +1,6 @@
 body {
     margin: 0;
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -46,13 +45,13 @@ body {
     text-align: center;
     width: 64px;
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, .6);
     align-self: center;
+    font-size: 18px;
 }
 
 .header__item:hover {
-    background: #BDBDBD;
-    border-radius: 8px;
+    color: rgba(0, 0, 0, 1);
 }
 
 .filler {
