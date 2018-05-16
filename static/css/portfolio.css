@@ -15,11 +15,19 @@ body {
     max-width: 800px;
     background: white;
     align-self: center;
+    padding: 32px;
 }
 
 
 .modal__image {
     width: 132px;
+    align-self: center;
+}
+
+
+.modal__content {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -27,17 +35,23 @@ body {
     padding: 32px;
 }
 
-.modal__skill {
-    height: 32px;
-    margin: 8px;
-    border-radius: 4px;
-    padding: 2px;
+.modal__skills {
+    padding-top: 32px;
 }
 
-.filter-header {
-    background: #E0E0E0;
+.modal__skill {
+    height: 24px;
+    margin: 8px;
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: #9E9E9E;
+}
+
+.filter-header {    background: #E0E0E0;
     display: flex;
     padding: 16px;
+
 }
 
 .derp {
@@ -111,6 +125,10 @@ body {
     .filter-header {
         display: none;
     }
+
+    .modal {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 675px) {
@@ -125,6 +143,14 @@ body {
     .project__description {
         padding: 0;
         margin-left: 20px;
+    }
+
+    .modal {
+        max-width: 200px;
+    }
+
+    .modal__description {
+        padding: 0;
     }
 
 }

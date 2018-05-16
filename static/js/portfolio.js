@@ -14,16 +14,22 @@ var web = new Skill("Web", "#dd2c00", "/static/assets/web.png");
 var projects = {
     vidangel: {
         img: "/static/assets/vidangel.png",
-        description: "Bacon ipsum dolor amet ball tip t-bone kielbasa pancetta burgdoggen, alcatra pork pastrami short loin.",
+        description: "This project was a large Java app written in an MVC like way. After joining the VidAngel Team, " +
+        "I've converted 15% of their codebase into Kotlin, and dropped the size of the code base by over 10%. " +
+        "Converting the app architecture over to MVVM has been a challenge, but has brought massive benefits with maintainability.",
         awards: [],
         skills: [android, postgres],
         link: ""
     },
     vampir: {
         img: "/static/assets/vampir.png",
-        description: "Bacon ipsum dolor amet ball tip t-bone kielbasa pancetta burgdoggen, alcatra pork pastrami short loin.",
-        awards: [""],
-        skills: [android, go, web, postgres, machineLearning],
+        description: "After watching my sister struggle to maintain her blood sugar for years, " +
+        "I thought that there had to be a better way. After a year of planning and looking over solutions, " +
+        "I decided on Machine Learning and entered into a Hackathon. There we took first place, and then went " +
+        "on to take first place at BYU's Student Innovator of the year competition. Since then, we have decided to open source" +
+        "the project after Google's announcement that they would be using similar technology.",
+        awards: ["Student Innovators of the Year"],
+        skills: [android, web, postgres, machineLearning],
         link: ""
     }
 };
@@ -36,7 +42,7 @@ function createSkill(skill) {
 
 function fillOutModal(project) {
 
-    var skills = $(".modal__skills")
+    var skills = $(".modal__skills--icons")
 
     $(".modal-container").css({"display": "flex"});
 
@@ -59,8 +65,8 @@ function lock() {
 
 function unlock() {
     $("body").css({
-        overflow: "hidden",
-        position: "fixed",
+        overflow: "auto",
+        position: "absolute",
         height: "auto"
     });
 }
@@ -68,17 +74,13 @@ function unlock() {
 $(document).ready(function() {
 
     $(".modal-container").click(function () {
-        $(this).hide()
-    });
-
-    $(".modal").click(function (e) {
-        e.stopPropagation();
+        $(this).hide();
         unlock()
     });
 
     $(".project__about").click(function () {
         var id = $(this).parent().attr('id');
-        fillOutModal(projects[id])
+        fillOutModal(projects[id]);
         lock()
     });
 });
